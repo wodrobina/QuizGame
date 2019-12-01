@@ -15,11 +15,11 @@ public class UserFacade {
 
     public User registerUserIntoGame(NewUserDto newUser) {
         final User user = new User(newUser);
-        user.assignChallanges(provideChallangesToNewUser(newUser));
+        user.assignChallanges(provideChallengesToNewUser(newUser));
         return user;
     }
 
-    private Set<UserChallange> provideChallangesToNewUser(NewUserDto newUser) {
+    private Set<UserChallange> provideChallengesToNewUser(NewUserDto newUser) {
         return questionFacade.provideChallengesToNewUser(newUser).stream()
                 .map(providedChallenge -> new UserChallange(providedChallenge.getQuestionText(),
                         providedChallenge.getPossibleAnswers()))
