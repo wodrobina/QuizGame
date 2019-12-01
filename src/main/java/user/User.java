@@ -5,13 +5,13 @@ import java.util.Set;
 class User {
 
     private final UserData userData;
-    private Set<UserChallange> userChallanges;
+    private Set<UserChallange> userChallenges;
 
     public User(NewUserDto newUser) {
         userData = new UserData(newUser.getNewUserName());
     }
 
-    void assignChallanges(Set<UserChallange> userChallanges) {
-        this.userChallanges = Set.copyOf(userChallanges);
+    void assignChallenges(Set<UserChallange> userChallenges) {
+        this.userChallenges = Set.copyOf(userChallenges);
     }
 }

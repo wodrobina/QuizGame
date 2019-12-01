@@ -15,7 +15,7 @@ public class UserFacade {
 
     public User registerUserIntoGame(NewUserDto newUser) {
         final User user = new User(newUser);
-        user.assignChallanges(provideChallengesToNewUser(newUser));
+        user.assignChallenges(provideChallengesToNewUser(newUser));
         return user;
     }
 

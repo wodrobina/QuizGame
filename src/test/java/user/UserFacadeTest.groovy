@@ -16,12 +16,12 @@ class UserFacadeSpec extends Specification {
 
     def "Newly registered user should be provided with ten initial challanges"() {
         given: "User creation dto"
-        NewUserDto newUserDto = new NewUserDto(newUserName);
+        NewUserDto newUserDto = new NewUserDto("anyUsername");
 
         when: "Request is performed on facade"
         user = userFacade.registerUserIntoGame(newUserDto);
 
-        then: "Creted user should have ten challanges provided"
+        then: "Created user should have ten challenges provided"
 
     }
 }
